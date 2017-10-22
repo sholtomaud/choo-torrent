@@ -1,0 +1,9 @@
+{
+  "name": "choo-torrent",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "files": [
+    "dist"
+  ]
+}

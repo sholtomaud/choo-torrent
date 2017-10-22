@@ -1,0 +1,27 @@
+{
+  "name": "choo-torrent",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf dist/* && export NODE_ENV=production && bankai build ./index.js",
+    "deploy": "npx now -e NODE_ENV=\"production\" --public",
+    "dev": "bankai start index.js",
+    "inspect": "bankai inspect index.js",
+    "test": "standard --fix && npm run test-deps",
+    "test-deps": "dependency-check . && dependency-check . --extra --no-dev -i tachyons -i serve"
+  },
+  "dependencies": {
+    "choo": "^6.4.3",
+    "choo-log": "^8.0.0",
+    "choo-service-worker": "^2.3.1",
+    "sheetify": "^6.2.0",
+    "tachyons": "^4.8.1",
+    "webtorrent-element": "^1.0.1"
+  },
+  "devDependencies": {
+    "bankai": "^9.0.0-rc8",
+    "choo-devtools": "^2.0.0",
+    "dependency-check": "^2.9.1",
+    "standard": "^10.0.3"
+  }
+}
